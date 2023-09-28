@@ -12,10 +12,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  user = {
-    email:"",
-    password:""
 
+//   {
+//     password: pruebaSeleccion 
+//     username: prueba.pass@gmail.com
+// }
+  user = {
+    password:"",
+    username:""
   }
 
 
