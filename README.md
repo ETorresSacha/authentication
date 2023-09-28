@@ -1,12 +1,13 @@
-TITULO: AUTHENTICATION
+TÍTULO: AUTHENTICATION
 ## Descripción
 
-Este proyecto es parte de una prueba técnica en el cual solicitan crea una app de auth en angular, utiliza el siguiente endpoint http://159.65.96.86:8080/services/auth/signin (postman)
-con los siguientes params: 
+Este proyecto es parte de una prueba técnica en el cual solicitan crea una app de auth en angular, utiliza el siguiente endpoint http://159.65.96.86:8080/services/auth/signin (postman) con los siguientes params:
+
 {
     password: pruebaSeleccion 
     username: prueba.pass@gmail.com
 }
+
  Puntos para tener en cuenta: signals, reactive forms, effects(si lo ve necesario), guards, lazyload, uso de principios DRY y buenas prácticas.
 
 ## Experiencia
