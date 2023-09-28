@@ -14,8 +14,12 @@ import { Routes, RouterModule } from "@angular/router";
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 
+//Providers
+import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
+import { authGuard } from './guards/auth.guard';
+
 const routes: Routes = [
-  {path:'dashboard', component: DashboardComponent},
+  {path:'dashboard', component: DashboardComponent, canActivate: [authGuard]},
   {path:'login', component: LoginComponent},
   {path:'home', component: HomeComponent},
 ];
@@ -34,7 +38,10 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: JWT_OPTIONS, useValue:JWT_OPTIONS},
+    JwtHelperService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
