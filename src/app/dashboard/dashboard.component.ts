@@ -27,7 +27,7 @@ export class DashboardComponent {
           'Fin de sesión'
         )
         localStorage.clear()
-    this.router.navigate(['login'])
+    this.router.navigate(['home'])
       }
     })
   }
