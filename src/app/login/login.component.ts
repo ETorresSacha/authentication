@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor() { }
+  constructor( private AuthService:AuthService) { }
 
   ngOnInit(): void {
     
@@ -20,6 +21,10 @@ export class LoginComponent implements OnInit {
 
   login(){
     console.log(this.user);
+    this.AuthService.singin(this.user).subscribe(res =>{
+      console.log(res);
+      
+    })
     
   }
 

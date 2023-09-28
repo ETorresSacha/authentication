@@ -12,6 +12,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 //Modules
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 const routes: Routes = [
   {path:'dashboard', component: DashboardComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
