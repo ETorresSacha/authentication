@@ -10,6 +10,15 @@ Este proyecto es parte de una prueba técnica en el cual solicitan crea una app 
 
  Puntos para tener en cuenta: signals, reactive forms, effects(si lo ve necesario), guards, lazyload, uso de principios DRY y buenas prácticas.
 
+ ## Objetivos
+🎯 Se implementó un navbar básico con tres opciones que redirige a un componente respectivamente.
+🎯 Se creo un formulario de login el cual se validó el username y el password.
+🎯 Se guardo los datos en localStorage.
+🎯 Se protegió la ruta dashboard para evitar ingresar si no está logueado.
+🎯 Un botón de salir des dashboard, te dirige al home y limpia el localStorage.
+
+ 
+
 ## Experiencia
 Fue un verdadero reto porque me toco investigar sobre angular, tuve que aprender la funcionalidad y la estructura de esta tecnología. Al principio me pareció complicado, pero a medida lo iba entendiendo era más fácil. Se utiliza menos código eso es un punto a favor de este framework.
 
