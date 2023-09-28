@@ -29,13 +29,8 @@ export class LoginComponent implements OnInit {
   constructor( 
     private AuthService:AuthService,
     private router:Router,
-    // private fb:FormBuilder
-    ) { 
-      // this.form = this.fb.group({
-      //   username:['',[Validators.required,Validators.email]],
-      //   password:['',[Validators.required, Validators.minLength(8)]]
-      // })
-    }
+
+    ) { }
 
   ngOnInit(): void {
     
@@ -51,10 +46,8 @@ export class LoginComponent implements OnInit {
   // }
 
   login(){
-    console.log(this.formUser.value);
     
     this.AuthService.singin(this.formUser.value).subscribe((res:any) =>{
-      console.log(res);
       
       localStorage.setItem('token',res.accessToken)
       this.router.navigate(['dashboard'])

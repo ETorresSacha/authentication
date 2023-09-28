@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,9 +13,25 @@ export class DashboardComponent {
     ) { }
 
   logout(){
-    console.log("salir");
-    localStorage.clear()
+    Swal.fire({
+      title: 'Alerta!',
+      text: "¿Estas seguro de cerrar sesión?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Fin de sesión'
+        )
+        localStorage.clear()
     this.router.navigate(['login'])
+      }
+    })
+
+    
     
   }
 

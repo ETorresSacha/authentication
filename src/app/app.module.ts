@@ -1,9 +1,6 @@
 
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { AppComponent } from './app.component';
-import { ContadorComponent } from './contador/contador.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -27,7 +24,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ContadorComponent,
     DashboardComponent,
     LoginComponent,
     HomeComponent,
