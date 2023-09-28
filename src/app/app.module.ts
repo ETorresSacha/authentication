@@ -20,6 +20,7 @@ const routes: Routes = [
   {path:'dashboard', component: DashboardComponent, canActivate: [authGuard]},
   {path:'login', component: LoginComponent},
   {path:'home', component: HomeComponent},
+  {path:'**', pathMatch:'full', redirectTo: 'home'},
 ];
 
 @NgModule({
