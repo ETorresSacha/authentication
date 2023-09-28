@@ -12,11 +12,6 @@ export class HomeComponent {
 
     ) { }
   iniciar(){
-
       this.router.navigate(['login'])
-      
-
-    
   }
-
 }

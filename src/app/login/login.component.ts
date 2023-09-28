@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     return this.formUser.get('password') as FormControl
   }
 
-  // form:FormGroup
+  // FormGroup
   formUser  = new FormGroup({
     'password': new FormControl('',Validators.required),
     'username': new FormControl('',[Validators.required,Validators.email]) 
@@ -36,22 +36,12 @@ export class LoginComponent implements OnInit {
     
   }
 
-//   {
-//     password: pruebaSeleccion 
-//     username: prueba.pass@gmail.com
-// }
-  // user = {
-  //   password:"",
-  //   username:""
-  // }
-
   login(){
     
     this.AuthService.singin(this.formUser.value).subscribe((res:any) =>{
-      
-      localStorage.setItem('token',res.accessToken)
-      this.router.navigate(['dashboard'])
-      
+
+    localStorage.setItem('token',res.accessToken)
+    this.router.navigate(['dashboard'])
     })
     
   }
