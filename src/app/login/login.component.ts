@@ -24,14 +24,10 @@ export class LoginComponent implements OnInit {
   user = {
     password:"",
     username:""
-
   }
 
-
   login(){
-    console.log(this.user);
     this.AuthService.singin(this.user).subscribe((res:any) =>{ //!falta tipar
-      console.log(res);
       localStorage.setItem('token',res.accessToken)
       this.router.navigate(['dashboard'])
       
